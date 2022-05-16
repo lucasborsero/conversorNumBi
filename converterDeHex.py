@@ -38,8 +38,8 @@ def calculatorHexDec():
     hexList = []
 
     for i in range(len(inp)):
-        hexNum = inp[i:i+1]
-        hexList.append(hexNum.upper())
+        aux = inp[i]
+        hexList.append(aux.upper())
 
     hexList.reverse()
 
