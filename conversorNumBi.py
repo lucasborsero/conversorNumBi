@@ -1,4 +1,4 @@
-def calculatorDeBi():
+def calculatorDecBi():
 
     inp = int(input("Insert a decimal number: "))
 
@@ -7,7 +7,9 @@ def calculatorDeBi():
 
     while sub > 1:
         sub = sub//2
+        print(sub)
         rest = sub%2
+        print(rest)
         list.append(str(rest))
 
     list.reverse()
@@ -15,32 +17,25 @@ def calculatorDeBi():
     print("Binary Number:","".join(list))
 
 # _________________________________________________
-def calculatorBiDe():
+def calculatorBiDec():
 
     inp = input("Insert a binary number: ")
 
     i = 0
-    bi_list = []
-    for i in range(len(inp)):
-        biNum = inp[i:i+1]
-        bi_list.append(biNum)
-        i = i
+    biList = []
 
-    bi_list.reverse()
+    for i in range(len(inp)):
+        biNum = inp[i]
+        biList.append(biNum)
+        print(i)
+
+    print(biList)
+    biList.reverse()
 
     numDecimal = 0
-    for j in range(len(bi_list)):
-        numDecimal = numDecimal + (int(bi_list[j])* 2**(j))
+    for j in range(len(biList)):
+        numDecimal = numDecimal + (int(biList[j])*2**(j))
 
     print("Decimal Number: ",numDecimal)
-
-# _________________________________________________
-
-choose = int(input("Choose the operation: \n1) Decimal -> Binary; \n2) Binary -> Decimal. \n"))
-
-if choose == 1:
-    calculatorDeBi()
-else:
-    calculatorBiDe()
 
 # _________________________________________________
